@@ -1,0 +1,96 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="fire-mission.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col-lg-8 col-sm-12 p-1" >
+
+                <div class="canvas-parent" id="canvas-parent">
+                    <canvas id="bg" width="800" height="800" style="position: absolute; z-index: 0"></canvas>
+                    <canvas id="fg" width="800" height="800" style="position: absolute; z-index: 1"></canvas>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-sm-12 p-1">
+                <div class="card">
+
+                    <div class="card-body">
+                        <h4 class="card-title text-center">FireMission.js</h4>
+
+                        <table class="table table-sm table-borderless">
+                            <thead>
+                                <tr><th scope="col" colspan="2">Shortcut Keys</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>A \ Enter</td>
+                                    <td>Add Current</td>
+                                </tr>
+                                <tr>
+                                    <td>R \ Backspace</td>
+                                    <td>Remove Last</td>
+                                </tr>
+                                <tr>
+                                    <td>C \ Delete</td>
+                                    <td>Clear All</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="input-group mt-3 mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="fmMapSelect">Map</label>
+                            </div>
+                            <select class="custom-select" id="fmMapSelect"></select>
+                        </div>
+
+                        <div class="btn-group  btn-block mt-2 mb-2" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-primary btn-sm w-75 ml-1 mr-1" id="fmAddMission">Add Fire Mission</button>
+                            <button type="button" class="btn btn-danger btn-sm w-25 ml-1 mr-1" id="fmClearTable">
+                                <span style="font-size: 1rem;">&times;</span>
+                            </button>
+                        </div>
+
+                        <table id="fmMissionTable" class="table table-borderless table-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Dist.</th>
+                                    <th scope="col">BRG</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="fire-mission.min.js"></script>
+
+<script>
+
+let fmConfig = {
+    images : []
+}
+
+FireMissionJS(fmConfig)
+
+</script>
+
+</html>
